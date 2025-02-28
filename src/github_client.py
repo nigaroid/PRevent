@@ -11,7 +11,7 @@ def initialize_github_client() -> Github:
     jwt_token = create_jwt()
     installation_token = get_installation_token(jwt_token)
     return Github(installation_token)
-
+ 
 
 def get_installation_token(jwt_token: str) -> str:
     headers = jwt_headers(jwt_token)
